@@ -62,7 +62,7 @@ public class OpenFilePlusPlugin implements FlutterPlugin, MethodCallHandler, Act
 
     private boolean isResultSubmitted = false;
 
-    @Deprecated
+    /*@Deprecated
     public static void registerWith(PluginRegistry.Registrar registrar) {
         OpenFilePlusPlugin plugin = new OpenFilePlusPlugin();
         plugin.activity = registrar.activity();
@@ -71,7 +71,7 @@ public class OpenFilePlusPlugin implements FlutterPlugin, MethodCallHandler, Act
         plugin.channel.setMethodCallHandler(plugin);
         registrar.addRequestPermissionsResultListener(plugin);
         registrar.addActivityResultListener(plugin);
-    }
+    }*/
 
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
