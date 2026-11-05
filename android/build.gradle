@@ -1,28 +1,35 @@
+/*
 group 'com.joutvhu.openfile'
 version '1.0.0'
+*/
 
-buildscript {
+/*buildscript {
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.2.0'
+        classpath 'com.android.tools.build:gradle:8.1.0'
     }
+}*/
+plugins {
+    id 'com.android.library'
+    // If your plugin uses Kotlin, uncomment the next line:
+    id 'kotlin-android'
 }
-
-rootProject.allprojects {
+/*rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
     }
-}
+}*/
 
-apply plugin: 'com.android.library'
+//apply plugin: 'com.android.library'
 
 android {
-    compileSdk 33
+    namespace 'com.joutvhu.openfile'
+    compileSdk 36
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -33,11 +40,9 @@ android {
         minSdkVersion 16
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    lintOptions {
-        disable 'InvalidPackage'
+    lint {
+        disable += ['InvalidPackage']
     }
-
-    namespace 'com.joutvhu.openfile'
 }
 
 dependencies {
